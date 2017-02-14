@@ -6,10 +6,13 @@
            review="android-review.googlesource.com" />
   <remote  name="gitlab"
            fetch="https://gitlab.com/copperhead/"
-           revision="refs/heads/nougat-mr1.1-release" />
+           revision="refs/heads/N4F26Q.2017.02.12.02.58.40" />
   <remote  name="github"
            fetch="https://github.com/copperheados/"
-           revision="refs/heads/nougat-mr1.1-release" />
+           revision="refs/heads/N4F26Q.2017.02.12.02.58.40" />
+  <remote  name="spirotot"
+           fetch="https://github.com/spirotot/"
+           revision="refs/heads/N4F26Q.2017.02.12.02.58.40" />
   <default revision="refs/tags/android-7.1.1_r15"
            remote="aosp"
            sync-j="4" />
@@ -58,7 +61,7 @@
   <project path="device/google/dragon-kernel" name="device/google/dragon-kernel" groups="device,dragon" clone-depth="1" />
   <project path="device/google/marlin" name="device_google_marlin" groups="device,marlin" remote="github" />
   <project path="device/htc/flounder" name="device_htc_flounder" groups="device,flounder,broadcom_pdk" remote="github" />
-  <project path="device/huawei/angler" name="device_huawei_angler" groups="device,angler,broadcom_pdk" remote="github" />
+  <project path="device/huawei/angler" name="device_huawei_angler" groups="device,angler,broadcom_pdk" remote="spirotot" />
   <project path="device/intel/edison" name="device/intel/edison" groups="device" />
   <project path="device/lge/bullhead" name="device_lge_bullhead" groups="device,bullhead" remote="github" />
   <project path="device/linaro/hikey" name="device/linaro/hikey" />
@@ -553,5 +556,17 @@
   <project path="tools/test/connectivity" name="platform/tools/test/connectivity" />
   <project path="tools/tradefederation" name="platform/tools/tradefederation" groups="notdefault,tradefed" />
   <project path="vendor" name="vendor" remote="gitlab" />
+
+  <remote name="opengapps" fetch="https://github.com/opengapps/"  />
+
+  <project path="vendor/google/build" name="aosp_build" revision="master" remote="opengapps" />
+  <project path="vendor/opengapps/sources/all" name="all" clone-depth="1" revision="master" remote="opengapps" />
+
+  <!-- arm64 depends on arm -->
+  <project path="vendor/opengapps/sources/arm" name="arm" clone-depth="1" revision="master" remote="opengapps" />
+  <project path="vendor/opengapps/sources/arm64" name="arm64" clone-depth="1" revision="master" remote="opengapps" />
+
+  <project path="vendor/opengapps/sources/x86" name="x86" clone-depth="1" revision="master" remote="opengapps" />
+  <project path="vendor/opengapps/sources/x86_64" name="x86_64" clone-depth="1" revision="master" remote="opengapps" />
 
 </manifest>

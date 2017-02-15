@@ -6,10 +6,10 @@
            review="android-review.googlesource.com" />
   <remote  name="gitlab"
            fetch="https://gitlab.com/copperhead/"
-           revision="refs/heads/N4F26Q.2017.02.12.02.58.40" />
+           revision="refs/tags/N4F26Q.2017.02.12.02.58.40" />
   <remote  name="github"
            fetch="https://github.com/copperheados/"
-           revision="refs/heads/N4F26Q.2017.02.12.02.58.40" />
+           revision="refs/tags/N4F26Q.2017.02.12.02.58.40" />
   <remote  name="spirotot"
            fetch="https://github.com/spirotot/"
            revision="refs/heads/N4F26Q.2017.02.12.02.58.40" />
